@@ -1,16 +1,25 @@
-<mat-card>
+<mat-card class="card-nlist">
 
   <mat-card-title>Lists</mat-card-title>
+  <button class="nl"mat-raised-button color="accent"routerLink="/new-list">New List</button>
+<br>
+<br>
+<mat-accordion>
+  <mat-expansion-panel
+  *ngFor ="let list of lists" [routerLink]="['/lists',list._id]" >
 
-  <mat-expansion-panel >
     <mat-expansion-panel-header>
-      <mat-panel-title>
-  List1
+      <mat-panel-title >
+        {{ list.title}}
       </mat-panel-title>
 
-    </mat-expansion-panel-header>
-    <p>I'm visible because I am open</p>
+
+    </mat-expansion-panel-header >
+    <h3 style="font-weight:bold;">Tasks</h3>
+    <p   *ngFor ="let task of tasks"> {{ task.title}}</p>
+    <button mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon">
+      <mat-icon>plus_one</mat-icon>
+    </button>
   </mat-expansion-panel>
-  <br>
-  <button class="nl"mat-raised-button color="accent"routerLink="/new-list">New List</button>
+</mat-accordion>
 </mat-card>

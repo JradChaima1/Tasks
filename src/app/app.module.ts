@@ -11,13 +11,16 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { NewListComponent } from './pages/new-list/new-list.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input'
+import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+import { NewTaskComponent } from './pages/new-task/new-task.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     TaskViewComponent,
-    NewListComponent
+    NewListComponent,
+    NewTaskComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +31,7 @@ import {MatInputModule} from '@angular/material/input'
    HttpClientModule,
    MatFormFieldModule,
    MatInputModule,
+   MatIconModule,
     BrowserAnimationsModule
 
   ],
