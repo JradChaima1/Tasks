@@ -17,8 +17,8 @@
     </mat-expansion-panel-header >
     <h3 style="font-weight:bold;">Tasks</h3>
     <p   *ngFor ="let task of tasks"> {{ task.title}}</p>
-    <button mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon">
-      <mat-icon>plus_one</mat-icon>
+    <button mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon" [routerLink]="['/task-lists',list._id]">
+      <mat-icon>settings</mat-icon>
     </button>
   </mat-expansion-panel>
 </mat-accordion>

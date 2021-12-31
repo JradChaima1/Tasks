@@ -5,8 +5,9 @@
     <input #listTitleInput matInput placeholder="New list">
   </mat-form-field>
   <mat-card-actions >
-    <button mat-raised-button color="primary" (click)="createList(listTitleInput.value)">Create</button>
 
+    <button mat-raised-button  align="end" [routerLink]="['/lists']">Back to lists</button>
+    <button mat-raised-button color="primary" (click)="createList(listTitleInput.value)">Create</button>
   </mat-card-actions>
   </form>
 

@@ -2,10 +2,11 @@
   <form class="example-form">
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Create Task</mat-label>
-      <input #listTitleInput matInput placeholder="New task">
+      <input #taskTitleInput matInput placeholder="New task">
     </mat-form-field>
     <mat-card-actions >
-      <button mat-raised-button color="primary" (click)="createList(listTitleInput.value)">Create</button>
+      <button mat-raised-button color="primary" (click)="createTask(taskTitleInput.value)">Create</button>
+      <button mat-raised-button  align="end" [routerLink]="['/task-lists',listId]">Back to tasks</button>
 
     </mat-card-actions>
     </form>

@@ -13,14 +13,16 @@ import { NewListComponent } from './pages/new-list/new-list.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
-import { NewTaskComponent } from './pages/new-task/new-task.component'
+import { NewTaskComponent } from './pages/new-task/new-task.component';
+import { TaskListsComponent } from './pages/task-lists/task-lists.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     TaskViewComponent,
     NewListComponent,
-    NewTaskComponent
+    NewTaskComponent,
+    TaskListsComponent
   ],
   imports: [
     BrowserModule,

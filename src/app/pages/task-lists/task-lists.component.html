@@ -1,0 +1,17 @@
+<mat-card class="card-nlist">
+
+  <mat-card-title >Tasks</mat-card-title>
+
+  <button class="nl"mat-raised-button color="accent" [routerLink]="['/new-task',listId]">New Task</button>
+<mat-card *ngFor ="let task of tasks"> {{ task.title}}
+  <mat-card-actions align="end">
+  <button mat-mini-fab  color="primary" aria-label="Example icon button with a plus one icon"  >
+    <mat-icon>create</mat-icon>
+  </button>
+  <button mat-mini-fab color="warn" aria-label="Example icon button with a plus one icon" >
+    <mat-icon>delete</mat-icon>
+  </button>
+  </mat-card-actions>
+</mat-card>
+
+</mat-card>
