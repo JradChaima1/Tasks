@@ -11,4 +11,16 @@
   </mat-card-actions>
   </form>
 
+
+  <div class="success" *ngIf="showSucessMessage">
+ List added successfully
+  </div>
+
+
+  <div class="alert" *ngIf="serverErrorMessages">
+    {{serverErrorMessages}}
+  </div>
 </mat-card>
+
+
+

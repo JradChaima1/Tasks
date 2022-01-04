@@ -9,6 +9,8 @@ import { List } from 'src/app/models/list.model';
   styleUrls: ['./new-list.component.scss']
 })
 export class NewListComponent implements OnInit {
+  showSucessMessage!: boolean;
+  serverErrorMessages!: string;
 
   constructor(private taskService: TaskService, private router: Router) { }
 
@@ -16,11 +18,23 @@ export class NewListComponent implements OnInit {
   }
 
   createList(title: string) {
-    this.taskService.createList(title).subscribe((list:List) => {
-      console.log(list);
+    this.taskService.createList(title).subscribe((list:List) =>
+  {
+      this.showSucessMessage = true;
+      setTimeout(() => this.showSucessMessage = false, 4000);
 
 
-    });
+    },
+    err => {
+
+
+
+        this.serverErrorMessages = 'Something went wrong.Please contact admin.';
+    }
+
+
+
+    );
   }
 
 }

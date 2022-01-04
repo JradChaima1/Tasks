@@ -12,19 +12,19 @@ export class TaskService {
   readonly ROOT_URL;
 
   constructor(private http: HttpClient) {
-    this.ROOT_URL = 'http://localhost:3000';
+    this.ROOT_URL = 'http://localhost:3000/users';
   }
 
 
   getLists() {
-    return this.http.get(`${this.ROOT_URL}/lists`);
+    return this.http.get<List[]>(`${this.ROOT_URL}/lists`);
   }
   createList(title: string) {
 
     return this.http.post<List>(`${this.ROOT_URL}/lists`, { title });
   }
   getTasks(listId: string) {
-    return this.http.get(`${this.ROOT_URL}/lists/${listId}/tasks`);
+    return this.http.get<Task[]>(`${this.ROOT_URL}/lists/${listId}/tasks`);
   }
   createTask(title: string, listId: string) {
 
